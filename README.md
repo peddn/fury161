@@ -1,2 +1,2 @@
 # fury161
-A Wagtail Blog.
+This is the fury161 web application.
