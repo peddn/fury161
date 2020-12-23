@@ -16,10 +16,12 @@ import os
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
+# dotenv
+from dotenv import load_dotenv
+load_dotenv(verbose=True)
 
 # Application definition
 
@@ -151,4 +153,4 @@ WAGTAIL_SITE_NAME = "fury161"
 
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
-BASE_URL = 'https://example.com'
+BASE_URL = os.getenv("BASE_URL")
